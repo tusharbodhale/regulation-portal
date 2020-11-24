@@ -1,0 +1,165 @@
+<section id="basic-form-layouts">
+  <div class="row match-height">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title" id="basic-layout-form">Upload New Regulations</h4>
+          <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+          <div class="heading-elements">
+            <ul class="list-inline mb-0">
+              <li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
+              <li><a data-action="reload"><i class="icon-reload"></i></a></li>
+              <li><a data-action="expand"><i class="icon-expand2"></i></a></li>
+              <li><a data-action="close"><i class="icon-cross2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-body collapse in">
+          <div class="card-block">
+            <div class="card-text">
+              <p>Here you can upload new regulation file or add details as text</p>
+            </div>
+            <form class="form" [formGroup]="regulationForm" (ngSubmit)="onSubmit()">
+              <div class="form-body">
+                <h4 class="form-section"><i class="icon-clipboard4"></i> Circular</h4>
+
+                <div class="form-group">
+                  <label for="companyName">Circular Name</label>
+                  <input type="text" formControlName="name" id="companyName" class="form-control" placeholder="Circular Name" name="company">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="projectinput5">Status</label>
+                      <select id="projectinput5" name="interested" class="form-control">
+                        <option value="none" selected="" disabled="">Select Status</option>
+                        <option value="Active">Active</option>
+                        <option value="In Process">In Process</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="timesheetinput3">Effective Date</label>
+                      <div class="position-relative has-icon-left">
+                        <input type="date" id="timesheetinput3" class="form-control" name="date">
+                        <div class="form-control-position">
+                          <i class="icon-calendar5"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Select File</label>
+                  <label id="projectinput7" class="file center-block">
+                    <input type="file" id="file">
+                    <span class="file-custom"></span>
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label for="projectinput8">Description</label>
+                  <textarea id="projectinput8" rows="5" formControlName="description" class="form-control" name="comment" placeholder="About Project"></textarea>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn-warning mr-1">
+                  <i class="icon-cross2"></i> Cancel
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  <i class="icon-check2"></i> Save
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Recent invoice with Statistics -->
+<div class="row match-height">
+  <div class="col-xl-12 col-lg-12 col-md-12 ">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Recent Regulations</h4>
+        <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+        <div class="heading-elements">
+          <ul class="list-inline mb-0">
+            <li><a data-action="reload"><i class="icon-reload"></i></a></li>
+            <li><a data-action="expand"><i class="icon-expand2"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-block">
+          <p>Total Active Regulations 240, inactive 150.
+            <!--            <span class="float-xs-right"><a href="#">Invoice Summary <i class="icon-arrow-right2"></i></a></span>-->
+          </p>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover mb-0">
+            <thead>
+            <tr>
+              <th>Regulation#</th>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Effective Date</th>
+              <th>Upload Date</th>
+              <th>Download</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="text-truncate"><a href="#">ISO-001001</a></td>
+              <td class="text-truncate">Workers Compensation</td>
+              <td class="text-truncate"><span class="tag tag-default tag-success">Active</span></td>
+              <td class="text-truncate">10/05/2016</td>
+              <td class="text-truncate">10/05/2016</td>
+              <td class="text-truncate"><div class="col-md-4 col-sm-6 col-xs-12 fonticon-container">
+                <div class="fonticon-wrap"><i class="icon-cloud-download2 icon-size"></i></div>
+              </div></td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="#">ISO-01112</a></td>
+              <td class="text-truncate">COVID-19 Inclusion</td>
+              <td class="text-truncate"><span class="tag tag-default tag-warning">In Process</span></td>
+              <td class="text-truncate">11/12/2016</td>
+              <td class="text-truncate">11/12/2016</td>
+              <td class="text-truncate"><div class="col-md-4 col-sm-6 col-xs-12 fonticon-container">
+                <div class="fonticon-wrap"><i class="icon-cloud-download2 icon-size"></i></div>
+              </div></td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="#">ISO-001012</a></td>
+              <td class="text-truncate">Property Law</td>
+              <td class="text-truncate"><span class="tag tag-default tag-success">Active</span></td>
+              <td class="text-truncate">20/07/2016</td>
+              <td class="text-truncate">20/07/2016</td>
+              <td class="text-truncate"><div class="col-md-4 col-sm-6 col-xs-12 fonticon-container">
+                <div class="fonticon-wrap"><i class="icon-cloud-download2 icon-size"></i></div>
+              </div></td>
+            </tr>
+            <tr>
+              <td class="text-truncate"><a href="#">ISO-001401</a></td>
+              <td class="text-truncate">Casualty Law</td>
+              <td class="text-truncate"><span class="tag tag-default tag-success">Active</span></td>
+              <td class="text-truncate">16/11/2016</td>
+              <td class="text-truncate">16/11/2016</td>
+              <td class="text-truncate"><div class="col-md-4 col-sm-6 col-xs-12 fonticon-container">
+                <div class="fonticon-wrap"><i class="icon-cloud-download2 icon-size"></i></div>
+              </div></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
